@@ -1,0 +1,27 @@
+test,test,test
+test,test,test
+2,2,2
+test,test,test
+test,test,test
+test,test,test
+test,test,test
+google,google.com,google
+another test,https://www.google.com/,google2
+test,test,test
+one,two,three
+testtes,test,testtt
+object,object,object
+test object,test,
+URI TEST,,google
+should not be url,,description
+should not be,soundcloud.com,soundcloud
+shouldnt be 2,soundcloud.com,god
+test 4,https://soundcloud.com/kendrick-lamar-music/god,gid 2
+http test,https://soundcloud.com/kendrick-lamar-music/god,est
+test,http://soundcloud.com/kendrick-lamar-music/god,test
+google,google.com,google
+test,https://google.com,google
+google,https://google.com,google
+google,https://www.google.com,google
+TEST,WWW.TEST.COM,TEST
+"",check it,out

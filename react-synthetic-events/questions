@@ -1,0 +1,7 @@
+- Why does the karma alert function have to be
+  defined in app? Why not in KarmaButton.js?
+
+- Why is onClick defined in the <div>small 12... </div>
+  instead on on the actual button element?
+
+- event.target... could it be named anything? what is .target?

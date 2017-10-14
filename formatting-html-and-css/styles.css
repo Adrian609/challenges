@@ -1,0 +1,32 @@
+/*Your styles here*/
+body {
+  background-color: #f6f6ef;
+  font-family: sans-serif;
+}
+header {
+  width: 99%;
+  background: #FD6620;
+  padding: 5px 10px 5px 10px;
+  font-family: Ariel;
+}
+
+.menu-bar1 {
+  display:inline;
+  color: white;
+}
+
+.menu-bar2 {
+  display:inline;
+  text-align: center;
+}
+.purple-banner {
+  background-color: #40376E;
+}
+
+.green-banner {
+  background-color: #AAC0AA;
+}
+
+.gray-banner {
+  background-color: #7D8491;
+}

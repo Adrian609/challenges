@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Teams</title>
+  <link rel="stylesheet" href="/stylesheets/app.css">
+</head>
+
+  <body>
+    <!-- <div id="text"> -->
+      <h1>Teams</h1>
+      <% @teams.each do |team|%>
+        <p><a href="/teams/<%= team.name %>"> <%= team.name %></a></p>
+      <% end %>
+    <!-- </div> -->
+  </body>
+</html>

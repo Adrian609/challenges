@@ -1,0 +1,30 @@
+
+.page-header {
+  font-family: Veranda, Ariel, sans-serif;
+  color: #800000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 200%;
+  text-decoration: underline;
+}
+
+
+summary {
+  width: 25%;
+  margin: 20px auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.profile-pic {
+  margin: 20px auto;
+  width: 15%;
+  height: 15%;
+  border: 3px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}

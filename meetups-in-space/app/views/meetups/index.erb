@@ -1,0 +1,11 @@
+<h1>Meetups</h1>
+
+<div class='meetup-container'>
+  <% @meetups.each do |meetup| %>
+    <h3><%= meetup.name %></h3>
+    <h3><%= meetup.description %></h3>
+    <h3><%= meetup.location %></h3>
+    <h3><%= meetup.creator %></h3>
+    <h3><% meetup.attendees %></h3>
+  <% end %>
+</div>

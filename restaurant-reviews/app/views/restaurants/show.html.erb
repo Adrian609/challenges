@@ -1,0 +1,49 @@
+<h1><%= @restaurant.name %></h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="alert"><%= flash[:alert] %></div>
+<% end %>
+
+<p>
+  <strong>
+    Name:
+  </strong>
+  <%= @restaurant.name %>
+</p>
+
+<p>
+  <strong>
+    Address:
+  </strong>
+  <p>
+    <%= @restaurant.address %>
+  </p>
+  <p>
+    <%= @restaurant.city %>
+    <%= @restaurant.state %>
+    <%= @restaurant.zip %>
+  </p>
+  <strong>
+    Description:
+  </strong>
+  <p>
+    <%= @restaurant.description %>
+  </p>
+  <strong>
+    Reviews:
+  </strong>
+    <% @reviews.each do |review| %>
+      <p>Rating: <%= review.rating %></p>
+      <p>Review: <%= review.body %></p>
+      <p>Date created: <%= review.created_at.strftime("%B %d %Y") %></p>
+      <hr>
+    <% end %>
+</p>
+
+<span><%= link_to 'Add a Review', new_restaurant_review_path(@restaurant) %></span>
+<span><%= link_to 'Edit', edit_restaurant_path(@restaurant) %></span>
+<span><%= link_to 'Delete', @restaurant, method: :delete %></span>

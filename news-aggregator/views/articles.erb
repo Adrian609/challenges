@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Articles</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <h1><a href='/articles'>News Aggregator</a></h1>
+
+    <% @articles.each do |article| %>
+      <li>
+        <a href= "https://<%= article.url %>" target='_blank' > <%= article.article_title %></a>
+      </li>
+    <% end %>
+
+    <h3><a href="/articles/new">Submit Article</a></h3>
+
+  </body>
+</html>

@@ -1,0 +1,2 @@
+- Why do we have to have the <div id='PopUpAd'> predefined
+  in index.html? What if we had many different pop up ads?

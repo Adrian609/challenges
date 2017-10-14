@@ -1,0 +1,9 @@
+<h1>Reviews for <%= @restaurant.name %></h1>
+<p><%= link_to 'Back', :back %></p>
+
+<% @reviews.each do |review| %>
+  <p>Rating: <%= review.rating %></p>
+  <p>Review: <%= review.body %></p>
+  <p>Date created: <%= review.created_at.strftime("%B %d %Y") %></p>
+  <hr>
+<% end %>

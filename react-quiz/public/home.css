@@ -1,0 +1,39 @@
+body {
+  background-color: lightblue;
+  color: #000000;
+
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+ul {
+  margin: auto;
+  text-align: center;
+  width: 300px;
+}
+
+li {
+  /* Add a bit more spacing between list items. */
+  padding: 5px;
+}
+
+.question {
+  text-align: center;
+  padding: 30px;
+  color: blue;
+  font-weight: bold;
+}
+
+.Correct {
+  text-align: center;
+  color: green;
+  padding: 30px;
+  font-weight: bold;
+}
+
+.Incorrect {
+  text-align: center;
+  color: red;
+  padding: 30px;
+  font-weight: bold;
+}

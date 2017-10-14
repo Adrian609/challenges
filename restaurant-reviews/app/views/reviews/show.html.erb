@@ -1,0 +1,6 @@
+<h1>Review for <%= @restaurant.name %></h1>
+<p><%= link_to 'Home', root_path %></p>
+
+<p>Rating: <%= @review.rating %></p>
+<p>Review: <%= @review.body %></p>
+<p>Date created: <%= @review.created_at.strftime("%B %d %Y") %></p>

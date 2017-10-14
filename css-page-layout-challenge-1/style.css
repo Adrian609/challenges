@@ -1,0 +1,74 @@
+body {
+  font-family: 'Source Sans Pro';
+  background-color: #E5F3F4;
+  margin: auto;
+}
+
+.site-title {
+  margin: 0.5%;
+  padding: 0px 5px;
+  font-family: 'Alegreya';
+}
+.sub-title {
+  margin: 0.5%;
+  padding: 0px 5px;
+  font-family: 'Alegreya';
+  font-weight: lighter;
+}
+
+nav {
+  color: #FFFFFF;
+  background-color: #3498DB;
+  padding: 10px;
+}
+
+.quote {
+  background-color: #2ECC71;
+  border: 5px #26AE60 solid;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 4% 20%;
+}
+.quoted-from {
+  text-align: right;
+  font-style: italic;
+}
+
+.try-it-now {
+  font-family: 'Alegreya';
+  font-weight: lighter;
+  background-color: #E74C3C;
+  border: 5px #C0392B solid;
+  border-radius: 20px;
+  margin: 1% 35%;
+  text-align: center;
+  font-style: italic;
+  color: #FFFFFF;
+}
+
+.try-it-now a {
+  font-weight: bolder;
+  font-size: 1.5em;
+  font-style: italic;
+  color: white;
+}
+
+.blue-page-section{
+  margin: 3% 0% 0% 0%;
+  color: white;
+  background-color: #2C3E50;
+  padding: 30px 20px;
+}
+
+footer {
+  font-size: 1.1em;
+  text-align: center;
+  word-spacing: 30px;
+  background-color: #1C2224;
+  color: #3B5269;
+  padding: 1%;
+  height: auto 50px;
+}
+footer a {
+  color: #255371;
+}

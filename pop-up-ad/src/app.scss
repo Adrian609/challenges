@@ -1,0 +1,24 @@
+/* Your styling here */
+// body, html {
+//   margin: auto;
+// }
+
+#PopUpAd {
+  $color: #F55555;
+  margin: auto;
+  width: 60%;
+  padding: 5px;
+
+  text-align: center;
+  vertical-align: middle;
+  line-height: 90px;
+
+  background: $color;
+  border: 2px darken($color, 10%) solid;
+  border-radius: 5px;
+}
+
+.fa-fa-times {
+
+
+}

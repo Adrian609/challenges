@@ -1,0 +1,9 @@
+- Within constructor(props) and/or super(props) is where you would pass
+  data? As in API from fetch, local hash, etc.?
+    - What is super(props)
+    - So how would you pass in API data? Learn later?
+
+- Binding functions to 'this'?: Prevents method being called from referring
+  to the event that triggered the function. This is 'funky' JS behavior that
+  is avoided by binding.
+    - Why wouldn't this be automatic behavior of react?

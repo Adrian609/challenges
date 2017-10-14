@@ -1,0 +1,16 @@
+<h1><%=@house.name%></h1>
+<h3>Author: <%=@house.author%></h3>
+<h3>Source: <%=@house.source%></h3>
+<% if @house.motto %>
+  <%= @house.motto %>
+<% end %>
+<h3>Members:</h3>
+
+<ul>
+  <% @members.each do |member| %>
+    <li><%= member.first_name %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Edit house', edit_house_path(@house) %></p>
+<p><%= link_to 'Delete house', @house, method: :delete %></p>

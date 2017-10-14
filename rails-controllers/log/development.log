@@ -1,0 +1,234 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.2ms)[0m  [1m[35mDROP TABLE "articles" CASCADE[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "articles" ("id" serial primary key, "title" character varying NOT NULL, "url" text NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170405142139)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (24.3ms)[0m  [1m[35mCREATE TABLE "articles" ("id" serial primary key, "title" character varying NOT NULL, "url" text NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170405142139)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-09 16:50:31.897172"], ["updated_at", "2017-10-09 16:50:31.897172"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Why does Ember.js rock?"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Why does Ember.js rock?"], ["url", "https://kerricklong.com/articles/why-ember-js-rocks.html"], ["description", "Ember.js is a MVC (Model – View – Controller) JavaScript framework which is maintained by the Ember Core Team (including Tom Dale, Yehuda Katz, and others). It helps developers create ambitious single-page web applications that don't sacrifice what makes the web great: URI semantics, RESTful architecture, and the write-once, run-anywhere trio of HTML, CSS, and JavaScript."], ["created_at", "2017-10-09 16:50:31.938938"], ["updated_at", "2017-10-09 16:50:31.938938"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Mozilla Playdoh"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Mozilla Playdoh"], ["url", "http://playdoh.readthedocs.org/en/latest/"], ["description", "Mozilla's Playdoh is a web application template based on Django. Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Playdoh is simply a pre-configured Django project that adds some essential modules and middleware."], ["created_at", "2017-10-09 16:50:31.942921"], ["updated_at", "2017-10-09 16:50:31.942921"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Gigablast Search Engine, Now Open Source (C/C++)"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Gigablast Search Engine, Now Open Source (C/C++)"], ["url", "https://www.gigablast.com/"], ["description", "Gigablast is the first truly transparent search engine. It tells you exactly why the search results are ranked the way they are. There is nothing left to the imagination."], ["created_at", "2017-10-09 16:50:31.945308"], ["updated_at", "2017-10-09 16:50:31.945308"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Node.js Deployments with Docker, Dokku, & Digital Ocean"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Node.js Deployments with Docker, Dokku, & Digital Ocean"], ["url", "https://medium.com/code-adventures/438bce155dcb"], ["description", "DigitalOcean is a really nice cloud hosting company that offers excellent performance at affordable rates. Docker is an abstraction on top of LXC Containers. Docker introduces a workflow that makes operating containers straightforward and lots of fun. If you want to learn more about docker I suggest you read this article. Dokku is a tiny program that allows you to easily deploy your applications. It was built by progrium (from localtunnel) on top of docker, Buildstep, gitreceive, pluginhook, nginx, Heroku BuildPacks,& sshcommand."], ["created_at", "2017-10-09 16:50:31.947624"], ["updated_at", "2017-10-09 16:50:31.947624"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Build a Blog Engine in Go"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Build a Blog Engine in Go"], ["url", "http://0value.com/build-a-blog-engine-in-Go"], ["description", "A static blog generator in Go. It’s called trofaf because that’s its name. Get this: it takes markdown files, reads some YAML front matter, and generates good ol’ HTML files. I can already smell the Nobel. Anyway, the goal of this post is not to brag about the novelty of the thing, but to show how easy it is to get this done with Go’s rich standard library and some fine userland packages."], ["created_at", "2017-10-09 16:50:31.949870"], ["updated_at", "2017-10-09 16:50:31.949870"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-10-09 12:50:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 313ms (Views: 303.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-09 12:50:58 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/1" for 127.0.0.1 at 2017-10-09 12:51:12 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2017-10-09 12:51:16 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-09 12:51:19 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/3" for 127.0.0.1 at 2017-10-09 12:51:20 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-09 12:51:22 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/2" for 127.0.0.1 at 2017-10-09 12:52:04 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.5ms)[0m  [1m[35mDROP TABLE "articles" CASCADE[0m
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE TABLE "articles" ("id" serial primary key, "title" character varying NOT NULL, "url" text NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (12.0ms)[0m  [1m[35mDROP TABLE "articles" CASCADE[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "articles" ("id" serial primary key, "title" character varying NOT NULL, "url" text NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Why does Ember.js rock?"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Why does Ember.js rock?"], ["url", "https://kerricklong.com/articles/why-ember-js-rocks.html"], ["description", "Ember.js is a MVC (Model – View – Controller) JavaScript framework which is maintained by the Ember Core Team (including Tom Dale, Yehuda Katz, and others). It helps developers create ambitious single-page web applications that don't sacrifice what makes the web great: URI semantics, RESTful architecture, and the write-once, run-anywhere trio of HTML, CSS, and JavaScript."], ["created_at", "2017-10-09 17:07:31.343182"], ["updated_at", "2017-10-09 17:07:31.343182"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Mozilla Playdoh"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Mozilla Playdoh"], ["url", "http://playdoh.readthedocs.org/en/latest/"], ["description", "Mozilla's Playdoh is a web application template based on Django. Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Playdoh is simply a pre-configured Django project that adds some essential modules and middleware."], ["created_at", "2017-10-09 17:07:31.346411"], ["updated_at", "2017-10-09 17:07:31.346411"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Gigablast Search Engine, Now Open Source (C/C++)"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Gigablast Search Engine, Now Open Source (C/C++)"], ["url", "https://www.gigablast.com/"], ["description", "Gigablast is the first truly transparent search engine. It tells you exactly why the search results are ranked the way they are. There is nothing left to the imagination."], ["created_at", "2017-10-09 17:07:31.348535"], ["updated_at", "2017-10-09 17:07:31.348535"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Node.js Deployments with Docker, Dokku, & Digital Ocean"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Node.js Deployments with Docker, Dokku, & Digital Ocean"], ["url", "https://medium.com/code-adventures/438bce155dcb"], ["description", "DigitalOcean is a really nice cloud hosting company that offers excellent performance at affordable rates. Docker is an abstraction on top of LXC Containers. Docker introduces a workflow that makes operating containers straightforward and lots of fun. If you want to learn more about docker I suggest you read this article. Dokku is a tiny program that allows you to easily deploy your applications. It was built by progrium (from localtunnel) on top of docker, Buildstep, gitreceive, pluginhook, nginx, Heroku BuildPacks,& sshcommand."], ["created_at", "2017-10-09 17:07:31.350642"], ["updated_at", "2017-10-09 17:07:31.350642"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."title" = $1 LIMIT $2[0m  [["title", "Build a Blog Engine in Go"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Build a Blog Engine in Go"], ["url", "http://0value.com/build-a-blog-engine-in-Go"], ["description", "A static blog generator in Go. It’s called trofaf because that’s its name. Get this: it takes markdown files, reads some YAML front matter, and generates good ol’ HTML files. I can already smell the Nobel. Anyway, the goal of this post is not to brag about the novelty of the thing, but to show how easy it is to get this done with Go’s rich standard library and some fine userland packages."], ["created_at", "2017-10-09 17:07:31.352773"], ["updated_at", "2017-10-09 17:07:31.352773"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2017-10-09 13:08:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 242ms (Views: 232.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-10-09 13:08:18 -0400
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-10-09 13:08:31 -0400
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2017-10-09 13:09:17 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9GQYxFCWe17/lhBPmvpK/c8khuVtQmTt20/bGCP5Csc0gfxyAZm/0fZcdFStW9Ty94oXrlbvxHryUZPkh/kysA==", "article"=>{"title"=>"test", "url"=>"test.com", "description"=>"test"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "url", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "test"], ["url", "test.com"], ["description", "test"], ["created_at", "2017-10-09 17:09:17.693384"], ["updated_at", "2017-10-09 17:09:17.693384"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/articles/6
+Completed 302 Found in 11ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2017-10-09 13:09:17 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-10-09 13:09:35 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/6" for 127.0.0.1 at 2017-10-09 13:09:37 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-10-09 13:09:38 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.3ms)
+
+

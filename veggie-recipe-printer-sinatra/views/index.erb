@@ -1,0 +1,48 @@
+<!--  YOUR CODE HERE -->
+<!-- # <% require 'pry' %> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Veggie Recipe Printer Sinatra</title>
+    <!-- <link rel="stylesheet" href="home.css"> -->
+  </head>
+
+  <body>
+
+    <!-- <li>  </li> -->
+
+
+    <h1><%=@name%></h1>
+
+    <h3><%="Ingredients:"%></h3>
+    <% @ingredients.each do |ingredient| %>
+      <li><%= ingredient %></li>
+    <% end %>
+
+    <h3><%="Directions:"%></h3>
+    <% @directions.each do |step| %>
+      <li><%= step %></li>
+    <% end %>
+
+    <!-- how to uncomment in erb? -->
+
+    <!-- <h4><%="Reviews:"%></h4>
+    <% @reviews.each do |key, value| %>
+      <li>
+        <%= reviews.username %>
+        <%= reviews.rating %>
+        <%= reviews.review %>
+        <%= value %>
+      </li>
+    <% end %> -->
+
+    <form action ="/tasks" method="post">
+      <label for"task_name">New Task:</label>
+      <input type="text" id="task_name" name="task_name">
+
+      <input type="submit">
+    </form>
+
+  </body>
+</html>

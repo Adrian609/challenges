@@ -1,0 +1,15 @@
+{
+  "name": "launch_first_yarn_install",
+  "version": "1.0.0",
+  "description": "\"\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "author": "Drew Andre",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "yarn": "^1.2.1"
+  }
+}
