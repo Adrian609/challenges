@@ -1,0 +1,37 @@
+As a user, I want to be able to purchase a lighting product from palette.com and be able to control its settings over the web at palette.com (or heroku in this case).
+
+As a user, I want to be able to sign in to my account or sign up for an account using my "name/company name", email, and password.
+
+As a user, I want to be able to sign in to my account using my email and password.
+
+As a user, I want to be presented with a control dashboard when I log in.
+
+As a user, I want to be able to directly navigate to my company/personal lighting dashboard by visiting *company-name-here*.palette.com.
+
+As a user, I want access to my profile on the dashboard.
+
+As a user, I want to be able to change the product that I'm controlling using the dashboard if I have more than one product.
+
+As a user, I want to be able to sign out of my account so that other users can't alter my settings.
+
+As a user, I want to be able to control four primary aspects of my lighting product: color palette, effect settings, API data, and schedule settings.
+
+As a user, I want to be able to design a color palette and save it to my profile.
+
+As a user, I want to be able to select from a pre-defined list of API endpoints that can affect my led product's movement and color.
+
+As a user, I want to be able to change when my led product turns on and off.
+
+As a user, I want to be able to automatically change the color palette over time.
+
+As a user, I want to be able to put my device into an energy saving mode.
+
+As a user, I want to be able to see an estimate of how much power my device is using.
+
+As a user, I want to be able to disable my product on weekends.
+
+As a user, I want to be able to adjust the master brightness of my product.
+
+As a user, I want to be able to adjust the individual parameters of an effect, or link it to API end point data.
+
+As an admin, I want to be able to be able to custom-design API endpoint/effect interactions and save it to a user profile.
